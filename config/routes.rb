@@ -1,10 +1,13 @@
 Blog::Application.routes.draw do
   
   devise_for :users
+  
   resources :posts do
     resources :comments
   end
   
+  resources :users
+
   root to: 'welcome#index'
   get '/home' => 'welcome#index'
   get '/posts/:id' => 'posts#show'

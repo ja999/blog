@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!
 	def new
 		@post=Post.new
+		@post.email=current_user.email
 	end
 	
 	def edit
@@ -11,7 +12,7 @@ class PostsController < ApplicationController
 	def update
 	  @post = Post.find(params[:id])
 	 
-	  if @post.update(params[:post].permit(:title, :text))
+	  if @post.update(params[:post].permit(:email, :title, :text))
 	    redirect_to @post
 	  else
 	    render 'edit'
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params[:post].permit(:title, :text))
+		@post = Post.new(params[:post].permit(:email, :title, :text))
 		
 		@post.save
 		if @post.save
