@@ -7,6 +7,8 @@
 	<%= comment.body %>
 </p>
 <p>
-  	<%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% if current_user.email==comment.commenter or current_user.admin? %>
+  		<%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+  	<% end %>
 </p>
 <br>

@@ -1,6 +1,4 @@
-<div class="user_acc">
-  Signed is as: <%= current_user.email %> | <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-</div><br>
+<%= render 'posts/user_info' %>
 
 <p>
 	<strong> By: </strong>
