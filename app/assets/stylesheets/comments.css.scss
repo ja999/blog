@@ -1,3 +1,45 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#comment_header{
+	display: block;
+	overflow: hidden;
+	background-color: rgba(255, 184, 0, 0.59);
+	margin-top: 5%;
+}
+
+.comm-head{
+	float: left;
+	padding-left: 2%;
+}
+
+.comm-count{
+	float: right;
+	padding-right: 2%;
+	padding-top: 1%;
+}
+
+.comment{
+	margin-left: 4%;
+	margin-top: 2%;
+	background-color: rgba(255, 221, 87, 0.55);
+	padding: 1px 0 1px 20px;
+}
+
+.comm-opt{
+	float: right;
+	padding-left: 1%;
+	padding-right: 1%;
+	border: 0;
+	margin: 0;
+	background-color: rgba(177, 177, 177, 0.65);
+}
+
+#comm-add{
+	margin-left: 8%;
+	overflow: hidden;
+	margin-top: 4%;
+	padding: 0 0 1% 1%;
+	background-color: rgba(185, 185, 185, 0.49);
+}

@@ -1,13 +1,15 @@
+<div class="form" id='new_comment'>
 <%= form_for([@post, @post.comments.build]) do |f| %>
 	<p>
 		<%= f.label :commenter %><br>
-		<%= f.text_field :commenter, :value => current_user.email %>
+		<%= f.text_field :commenter, :value => current_user.email%>
 	</p>
 	<p>
 		<%= f.label :body %><br>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, size: '30x10' %>
 	</p>
 	<p>
 		<%= f.submit %>
 	</p>
 <% end %>
+</div>

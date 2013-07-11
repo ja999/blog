@@ -1,8 +1,10 @@
-<div class="user_acc">
-  Signed is as: <%= current_user.email %> | <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-</div>
+<%= render 'posts/user_info' %>
 
-<h1> New Post </h1>
+<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>
+
+<%= render 'posts/nav' %>
+
+<h1 class="head-a"> New Post </h1>
 
 <%= render 'form' %>
  

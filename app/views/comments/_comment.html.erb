@@ -1,3 +1,4 @@
+<div class='comment'>
 <p>
 	<strong>Commenter:</strong>
 	<%= comment.commenter %>
@@ -6,9 +7,9 @@
 	<strong>Comment:</strong>
 	<%= comment.body %>
 </p>
-<p>
+<p class="comm-opt">
 	<% if current_user.email==comment.commenter or current_user.admin? %>
   		<%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
   	<% end %>
 </p>
-<br>
+</div>

@@ -11,3 +11,26 @@
  *= require_self
  *= require_tree .
  */
+
+tr, td, p{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+textarea{
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Helvetica, Arial, sans-serif;	
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}

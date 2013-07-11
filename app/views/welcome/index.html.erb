@@ -1,5 +1,15 @@
-<h1> Hello with Rails! </h1>
-<%= link_to "New Post!", 'posts/new' %>
-<%= link_to "All posts!", 'posts' %>
-<br>
-<%= link_to "My Blog", controller: "posts" %>
+<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>
+<!--<div class="user_acc">
+		<ul class="menu">
+			<% if current_user!=nil %>
+				<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+			<% else %>
+				<li><%= link_to "Registration", 'users/sign_up'%></li>
+				<li><%= link_to "Sign in", 'users/sign_in'%></li>
+			<% end %>
+		</ul>
+</div>-->
+<%= render 'posts/nav' %>
+<!--<div><h1 id='welcome_head'> Lorem ipsum </h1></div>-->
+<div class="links_main" id='links-1'><h1><%= link_to "New Post!", 'posts/new' %></h1></div>
+<div class="links_main" id='links-2'><h1><%= link_to "All posts!", 'posts' %></h1></div>

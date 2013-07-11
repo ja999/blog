@@ -1,29 +1,59 @@
 <%= render 'posts/user_info' %>
 
-<h1>Listing posts</h1>
+<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>
+
+<%= render 'posts/nav' %>
+
+<h1 class="head-a">Listing posts</h1>
+
+
+<ul id="down-nav">
+  <li class="down-nav-el"><%= link_to "New Post", new_post_path %></li>
+  <li class="down-nav-el"><%= link_to "Home", '/home' %></li>
+</ul>
  
 <table>
-  <tr>
+  <tr id="tab-h">
     <th>ID</th>
     <th>User</th>
     <th>Title</th>
     <th>Text</th>
+    <th>Options</th>
   </tr>
  
+  <% i=0 %>
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.id %></td>
-      <td><%= post.email %></td>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <% if current_user.email==post.email or current_user.admin? %>
-        <td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <%end%>
-    </tr>
+    <% if i.modulo(2)==1 %>
+      <% i=0 %>
+      <tr class="tab-c">
+        <td class="id"><%= post.id %></td>
+        <td class="email"><%= post.email %></td>
+        <td class="title"><%= link_to post.title, post_path(post) %></td>
+        <td class="text"><%= post.text%></td>
+        <td class="options"><%= link_to 'Show', post_path(post) %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <% if current_user.email==post.email or current_user.admin? %>
+          <%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%end%></td>
+      </tr>
+    <% else %>
+      <% i=1 %>
+      <tr class="tab-ca">
+        <td class="id"><%= post.id %></td>
+        <td class="email"><%= post.email %></td>
+        <td class="title"><%= link_to post.title, post_path(post) %></td>
+        <td class="text"><%= post.text%></td>
+        <td class="options"><%= link_to 'Show', post_path(post) %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <% if current_user.email==post.email or current_user.admin? %>
+          <%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%end%></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
 
-<%= link_to "New Post", new_post_path %>
-<%= link_to "Home", '/home' %>
+<ul id="down-nav">
+  <li class="down-nav-el"><%= link_to "New Post", new_post_path %></li>
+  <li class="down-nav-el"><%= link_to "Home", '/home' %></li>
+</ul>

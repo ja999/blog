@@ -1,32 +1,32 @@
 <%= render 'posts/user_info' %>
 
-<p>
-	<strong> By: </strong>
-	<%= @post.email %>
-</p>
+<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>
 
-<p>
-	<strong> Title: </strong>
-	<%= @post.title %>
-</p>
+<%= render 'posts/nav' %>
 
-<p>
-	<strong>Text:</strong>
-	<%= @post.text %>
-</p>
+<div id="post-show">
+	<p id="post-top">
+		<%= @post.email %> wrote:<br>
+	</p>
+
+	<p id="post-body">
+		<strong>Title: <%= @post.title %></strong><br>
+		<%= @post.text %>
+	</p>
+</div>
+
 <div id="comment_header">
-	<h2> Comments </h2>
-	<p>
+	<h2 class="comm-head"> Comments </h2>
+	<p class="comm-count">
 		Number of comments: 
 		<%= @post.comments.count %>
 	</p>
 </div>
-<div class="comment">
-	<%= render @post.comments %>
+<%= render @post.comments %>
+<div id="comm-add">
+	<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
 </div>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
 <%= link_to "Back", posts_path %>
 | <%= link_to 'Edit', edit_post_path(@post) %>

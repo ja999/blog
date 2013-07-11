@@ -2,6 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user_acc{
+	display: block;
+	float: right;
+	margin: 10px 0 0;
+	font-family: Helvetica, Arial, sans-serif;
+	position: relative;
+}
+
+.menu{
+	list-style: none;
+}
+
+
+li{
+	display: inline;
+	margin-left: 20px;
+	color: rgba(77, 77, 77, 0.9);
+}
+
+a{
+	color: rgba(77, 77, 77, 0.9);
+	text-decoration: none;
+}
+
+
+.head-a{
+	display: block;
+	text-align: center;
+	color: rgba(77, 77, 77, 0.9);
+	font-size: 3em;
+	//margin: 0;
+	margin-bottom: 60px;
+	background: rgb(224, 224, 224);
+	padding: 0;
+	border: 0;
+	//position: absolute;
+	//left: 0%;
+	//right: 0%;
+}
+
+.head-b{
+	//display: block;
+	//float: left;
+	padding-top: 15px;
+	margin-left: 10px;
+	//position: relative;
+}
+
 .field_with_errors{
 	background-color: rgba(219, 0, 0, 0.8);
 	background-clip:border-box;
@@ -10,4 +58,109 @@
 #errorExplanation{
 	background-color: rgba(219, 0, 0, 0.8);	
 	background-clip:border-box;
+}
+
+#nav,#down-nav{
+	overflow: hidden;
+	list-style-type:none;
+	margin-top: 20px;
+	//padding:0;
+	background-color: rgba(255, 171, 23, 0.88);
+}
+
+#down-nav{
+	float: left;
+	background-color: rgba(255, 184, 0, 0.46);
+}
+
+.nav-el, .down-nav-el{
+	float: left;
+	display: block;
+	width:120px;
+	font-weight: bold;
+	text-align: center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.nav-el:hover,.nav-el:active{
+	background-color: rgba(233, 149, 0, 0.88);
+}
+
+.down-nav-el:hover,.down-nav-el:active{
+	background-color: rgba(255, 184, 0, 0.2);
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#tab-h{
+	background-color: rgba(175, 175, 175, 0.9);
+	background-clip: border-box;
+	margin: 0;
+	border: 0;
+}
+
+.id{
+	text-align: center;
+	width: 2%;
+}
+
+.email{
+	text-align: center;
+	width: 15%;
+}
+
+.options{
+	text-align: center;
+	width: 15%;
+}
+
+.title{
+	text-align: left;
+	color: black;
+	width: 20%;
+}
+
+table, th, td{
+
+}
+
+.tab-c{
+	background-color: rgba(189, 189, 189, 0.77);
+}
+
+.tab-ca{
+	background-color: rgba(216, 216, 216, 0.76);
+}
+
+.down-nav{
+	float: left;
+}
+
+#post-show{
+	background-color: rgba(162, 162, 162, 0.2);
+	padding: 0.1%;
+	padding-left: 1%;
+	border-collapse: collapse;
+
+}
+#post-top{
+	background-color: rgba(162, 162, 162, 0.5);
+	border-collapse: collapse;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#post-body{
+	background-color: rgba(162, 162, 162, 0.3);
+	border-collapse: collapse;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 15px;
+	padding-top: 5px;
 }

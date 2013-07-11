@@ -1,7 +1,15 @@
 <%= render 'posts/user_info' %>
 
-<h1>Editing post</h1>
+<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>
 
-<%= render 'form' %>
- 
+<%= render 'posts/nav' %>
+
+<h1 class="head-a">Editing post</h1>
+<!-- Tutauj if pozwalajacy na edycje tylko uprawnionym osobom! -->
+<% if current_user.admin? or @post.email==current_user.email %>
+	<%= render 'form' %>
+<% else %>
+	<p> You can only edit your own posts! </p>
+<% end %>
+
 <%= link_to 'Back', posts_path %>
