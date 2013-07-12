@@ -164,3 +164,18 @@ table, th, td{
 	padding-left: 15px;
 	padding-top: 5px;
 }
+
+div#new_post, div#new_comment{
+	background-color: rgba(255, 180, 42, 0.67);
+	overflow: hidden;
+	display: block;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+}
+
+div#new_post-inner, div#new_comment-inner{
+	width: 380px;
+	margin: auto auto;
+}

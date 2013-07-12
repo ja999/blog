@@ -5,11 +5,14 @@
 <%= render 'posts/nav' %>
 
 <h1 class="head-a">Editing post</h1>
-<!-- Tutauj if pozwalajacy na edycje tylko uprawnionym osobom! -->
+
 <% if current_user.admin? or @post.email==current_user.email %>
 	<%= render 'form' %>
 <% else %>
-	<p> You can only edit your own posts! </p>
+	<p class="alert"> You can only edit your own posts! </p>
 <% end %>
 
-<%= link_to 'Back', posts_path %>
+<ul id="down-nav">
+  <li class="down-nav-el"><%= link_to "Back", '/posts' %></li>
+  <li class="down-nav-el"><%= link_to "Home", '/home' %></li>
+</ul>
