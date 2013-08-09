@@ -1,10 +1,7 @@
-<%= render 'posts/user_info' %>
-
-<!--<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>-->
-
 <%= render 'posts/nav' %>
-
-<h1 class="head-a">Editing post</h1>
+<div class='post-bg'>
+  <img src='/images/post-bg1.jpg'>
+</div>
 
 <% if current_user.admin? or @post.email==current_user.email %>
 	<%= render 'form' %>
@@ -12,7 +9,5 @@
 	<p class="alert"> You can only edit your own posts! </p>
 <% end %>
 
-<ul id="down-nav">
-  <li class="down-nav-el"><%= link_to "Back", '/posts' %></li>
-  <li class="down-nav-el"><%= link_to "Home", '/home' %></li>
-</ul>
+<%= link_to "Back", '/posts' %>
+<%= link_to "Home", '/home' %>

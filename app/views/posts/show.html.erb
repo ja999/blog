@@ -1,32 +1,31 @@
-<%= render 'posts/user_info' %>
-
-<!--<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>-->
-
 <%= render 'posts/nav' %>
 
-<div id="post-show">
-	<p id="post-top">
-		<%= @post.email %> wrote:<br>
-	</p>
-
-	<p id="post-body">
-		<strong>Title: <%= @post.title %></strong><br>
-		<%= @post.text %>
-	</p>
+<div class='post-bg'>
+  <img src='/images/post-bg1.jpg'>
 </div>
 
-<div id="comment_header">
-	<h2 class="comm-head"> Comments </h2>
-	<p class="comm-count">
-		Number of comments: 
-		<%= @post.comments.count %>
-	</p>
-</div>
-<%= render @post.comments %>
-<div id="comm-add">
-	<h2>Add a comment:</h2>
-	<%= render 'comments/form' %>
-</div>
+<div class="jumbotron-outer">
+	<div class="jumbotron">
+		<p><%= @post.email %> wrote:<br></p>
 
-<%= link_to "Back", posts_path %>
-| <%= link_to 'Edit', edit_post_path(@post) %>
+		<h2><%= @post.title %></h2>
+		<p><%= @post.text_break %> </p>
+		<div class="pull-right"><%= link_to "Back", posts_path %>
+		| <%= link_to 'Edit', edit_post_path(@post) %></div>
+	</div>
+
+	<div class="comment_header">
+		<h2 class="comm-head"> Comments </h2>
+		<p class="comm-count">
+			Number of comments: 
+			<%= @post.comments.count %>
+		</p>
+	</div>
+
+	<%= render @post.comments.decorate %>
+
+	<div class="comm-add">
+		<h2>Add a comment:</h2>
+		<%= render 'comments/form' %>
+	</div>
+</div>

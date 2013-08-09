@@ -7,7 +7,7 @@ ruby '1.9.3'
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-#gem 'sqlite3'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -28,6 +28,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'devise', '3.0.0.rc'
+gem 'draper'
+gem 'decent_exposure'
+gem 'decent_decoration'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

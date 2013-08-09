@@ -1,15 +1,11 @@
 <div class='comment'>
-<p>
-	<strong>Commenter:</strong>
-	<%= comment.commenter %>
-</p>
-<p>
-	<strong>Comment:</strong>
-	<%= comment.body %>
-</p>
-<p class="comm-opt">
-	<% if current_user.email==comment.commenter or current_user.admin? %>
-  		<%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
-  	<% end %>
-</p>
+
+	<h4><%= comment.commenter %></h4>
+	<div class='comment-inner'><%= comment.body_break %></div>
+
+	<div class='dstr_wrapper'>
+		<% if current_user.email==comment.commenter or current_user.admin? %>
+			<%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</div>
 </div>

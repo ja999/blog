@@ -1,13 +1,11 @@
-<%= render 'posts/user_info' %>
-
-<!--<div class="head-b"><%= image_tag("code_school.png", :alt => "siema", :size => "280x45")%></div>-->
-
 <%= render 'posts/nav' %>
 
-<h1 class="head-a"> New Post </h1>
+<div class='post-bg'>
+  <img src='/images/post-bg1.jpg'>
+</div>
 
 <%= render 'form' %>
- 
+
 <ul id="down-nav">
   <li class="down-nav-el"><%= link_to "Back", '/posts' %></li>
   <li class="down-nav-el"><%= link_to "Home", '/home' %></li>

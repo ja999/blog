@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <% if notice != nil %>
+<!--  <% if notice != nil %>
   	<p class="notice"><%= notice %></p>
   <% end %>
   <% if alert != nil%>
   	<p class="alert"><%= alert %></p>
-  <% end %>
+  <% end %> -->
   <%= csrf_meta_tags %>
   <link href="/app/assets/stylesheets/bootstrap.css" rel="stylesheet">
   <link href="/app/assets/stylesheets/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
-
+<!-- <img class='background' src='/images/bckg.png'> -->
 <%= yield %>
 
 </body>

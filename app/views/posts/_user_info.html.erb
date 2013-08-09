@@ -1,0 +1,14 @@
+<div class="user_acc">
+	<% if current_user.admin? %>
+		<ul class="menu">
+			<li>Signed in as: <%= current_user.email %></li>
+			<li>Admin</li>
+			<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+		</ul>
+	<% else %>
+		<ul class="menu">
+			<li>Signed in as: <%= current_user.email %></li>
+			<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+		</ul>
+	<% end %>
+</div>

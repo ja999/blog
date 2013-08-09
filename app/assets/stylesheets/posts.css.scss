@@ -2,6 +2,119 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.well{
+	background-color: rgba(107, 148, 255, 0.14);
+	border-color: rgba(107, 148, 255, 0.5);
+}
+
+.right-pull{
+	float: right;
+}
+
+.left-pull{
+	float: left;
+}
+
+.post-text{
+	text-indent: 30px;
+}
+
+.info{
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.new_post{
+	min-width: 800px;
+}
+
+.new_post form{
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 740px;
+}
+
+.new_post textarea{
+	height: 200px;
+	width: 725px;
+}
+
+.new_post-inner{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.new_post-inner p{
+	text-align: left;
+	vertical-align: center;
+}
+
+.post-w-margin{
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 20px;
+}
+
+.post-bg{
+	//overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.post-bg img{
+	position: relative;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 300px;
+}
+
+.featurette{
+	overflow: hidden;
+	clear: both;
+}
+
+.posts{
+	overflow: hidden;
+	position: relative;
+}
+
+.featurette-divider {
+	margin: 20px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.section-caption{
+	text-align: center;
+	float: left;
+}
+
+.rel{
+	position: relative;
+	top: 150px;
+}
+
+.jumbotron-outer{
+	margin-top: 60px;
+}
+
+.jumbotron{
+	width: 65%;
+	min-width: 300px;
+	border: 1px solid rgba(162, 162, 162, 0.6);
+	border-radius: 10px;
+	background-color: rgba(255, 240, 208, 0.2);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding: 20px;
+	-webkit-box-shadow: 0 10px 100px rgba(132, 165, 196, 0.76);
+	-moz-box-shadow: 0 10px 100px rgba(132, 165, 196, 0.76);
+	box-shadow: 0 10px 100px rgba(132, 165, 196, 0.76);
+	h2{
+		color: rgba(0, 31, 255, 0.7);
+	}
+}
+
 /*
 .user_acc{
 	display: block;

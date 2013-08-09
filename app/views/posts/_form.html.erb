@@ -1,7 +1,6 @@
-<div id="new_post">
-  <div id="new_post-inner">
-    <%= form_for @post do |f| %>
-      <% if @post.errors.any? %>
+<div class="new_post">
+  <%= form_for @post do |f| %>
+    <% if @post.errors.any? %>
       <div id="errorExplanation">
         <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
         <ul>
@@ -10,26 +9,28 @@
         <% end %>
         </ul>
       </div>
-      <% end %>
-      
+    <% end %>
+    <div class="new_post-inner">
       <p>
-        <%= f.label :email %><br>
+        <%= f.label :email %>
         <%= f.text_field :email, :vaule => current_user.email %>
       </p>
-
       <p>
-        <%= f.label :title %><br>
+        <%= f.label :category %>
+        <%= f.select :category, [['Interviews','Interviews'],['Album reviews','Album reviews'],['Gear & equipment','Gear & equipment'], ['Other', 'Other']] %>
+      <p>
+        <%= f.label :title %>
         <%= f.text_field :title %>
       </p>
      
       <p>
         <%= f.label :text %><br>
-        <%= f.text_area :text, size: '30x10' %>
+        <%= f.text_area :text %>
       </p>
      
       <p>
         <%= f.submit %>
       </p>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
