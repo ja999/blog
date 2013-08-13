@@ -1,5 +1,6 @@
 Blog::Application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
   
   resources :posts do
@@ -13,6 +14,7 @@ Blog::Application.routes.draw do
   get '/posts/:id' => 'posts#show'
   get 'posts(.:format)' => 'posts#index'
   get '/posts/:id(.:format)' => 'posts#destroy'
+  get '/welcome/about' => 'welcome#about'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

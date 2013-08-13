@@ -17,7 +17,7 @@
       </p>
       <p>
         <%= f.label :category %>
-        <%= f.select :category, [['Interviews','Interviews'],['Album reviews','Album reviews'],['Gear & equipment','Gear & equipment'], ['Other', 'Other']] %>
+        <%= f.select :category, [['Interviews'],['Album reviews'],['Gear & equipment'], ['Other']] %>
       <p>
         <%= f.label :title %>
         <%= f.text_field :title %>
@@ -33,4 +33,8 @@
       </p>
     </div>
   <% end %>
+  <div class='pull-right'>
+    <%= link_to "Back", '/posts' %>
+    <%= link_to "Home", '/home' %>
+  </div>
 </div>
