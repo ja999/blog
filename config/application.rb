@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(:default, Rails.env)
 
 #config.assets.initialize_on_precompile = false
+config.assets.initialize_on_precompile = false
 
 module Blog
   class Application < Rails::Application
